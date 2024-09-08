@@ -1,0 +1,12 @@
+# Ignore node_modules folder
+node_modules/
+
+# Ignore environment variable files
+.env
+
+# Ignore package-lock if you don’t need it (optional)
+package-lock.json
+
+# Optional: Add other temporary files or folders
+*.log
+.DS_Store

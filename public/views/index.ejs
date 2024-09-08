@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+        h1 { color: #333; }
+        #sensorData { margin-bottom: 20px; }
+        #warning {
+            display: none;
+            background-color: #ffcccc;
+            border: 1px solid #ff0000;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sensor Dashboard</h1>
+    <div id="sensorData">
+        <p>Sensor 1: <span id="sensor1"><%= sensorData.sensor1 %></span></p>
+        <p>Sensor 2: <span id="sensor2"><%= sensorData.sensor2 %></span></p>
+        <p>Sensor 3: <span id="sensor3"><%= sensorData.sensor3 %></span></p>
+    </div>
+    <div id="warning">Warning: Abnormal sensor readings detected!</div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        socket.on('updateSensorData', (data) => {
+            document.getElementById('sensor1').textContent = data.sensor1;
+            document.getElementById('sensor2').textContent = data.sensor2;
+            document.getElementById('sensor3').textContent = data.sensor3;
+
+            // You can add your ML prediction logic here later
+            // For example:
+            // const prediction = predictAnomalyDetection(data);
+            // if (prediction.isAnomaly) {
+            //   showWarning();
+            // } else {
+            //   hideWarning();
+            // }
+        });
+
+        function showWarning() {
+            document.getElementById('warning').style.display = 'block';
+        }
+
+        function hideWarning() {
+            document.getElementById('warning').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
