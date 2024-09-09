@@ -26,32 +26,6 @@
     </div>
     <div id="warning">Warning: Abnormal sensor readings detected!</div>
 
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-        const socket = io();
-
-        socket.on('updateSensorData', (data) => {
-            document.getElementById('sensor1').textContent = data.sensor1;
-            document.getElementById('sensor2').textContent = data.sensor2;
-            document.getElementById('sensor3').textContent = data.sensor3;
-
-            // You can add your ML prediction logic here later
-            // For example:
-            // const prediction = predictAnomalyDetection(data);
-            // if (prediction.isAnomaly) {
-            //   showWarning();
-            // } else {
-            //   hideWarning();
-            // }
-        });
-
-        function showWarning() {
-            document.getElementById('warning').style.display = 'block';
-        }
-
-        function hideWarning() {
-            document.getElementById('warning').style.display = 'none';
-        }
-    </script>
+    <script src="/main.js"></script>
 </body>
 </html>
