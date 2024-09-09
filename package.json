@@ -1,5 +1,5 @@
 {
-  "name": "esp8266-sensor-dashboard",
+  "name": "vercel",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -8,9 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "sagneek",
   "license": "ISC",
-  "description": "",
+  "description": "random",
   "dependencies": {
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
@@ -20,5 +20,13 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sagneeksengupta/CENTRALIZED-MONITORING-SYSTEM-FOR-STREET-LIGHT-FAULT-PREDICTION-AND-LOCATION-TRACKING.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sagneeksengupta/CENTRALIZED-MONITORING-SYSTEM-FOR-STREET-LIGHT-FAULT-PREDICTION-AND-LOCATION-TRACKING/issues"
+  },
+  "homepage": "https://github.com/sagneeksengupta/CENTRALIZED-MONITORING-SYSTEM-FOR-STREET-LIGHT-FAULT-PREDICTION-AND-LOCATION-TRACKING#readme"
 }
